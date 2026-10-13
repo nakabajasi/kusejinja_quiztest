@@ -50,81 +50,28 @@
       margin: 0 auto;
     }
 
-    .masthead {
-      margin: 0 0 20px;
-      padding: 20px 18px 17px;
-      border-radius: 22px;
-      background: #dcefdc;
-      border: 1px solid #c4dfc2;
-      text-align: center;
-      box-shadow: 0 6px 22px rgba(69, 110, 67, .08);
-    }
-
-    .masthead h1 {
-      margin: 0;
-      color: #2d6044;
-      font-weight: 800;
-      font-size: clamp(19px, 4.8vw, 29px);
-      line-height: 1.55;
-      overflow-wrap: anywhere;
-    }
-
-    .accent-bar {
-      display: flex;
-      gap: 5px;
-      width: min(60%, 275px);
-      margin: 13px auto 0;
-      height: 6px;
-    }
-
-    .accent-bar span { flex: 1; border-radius: 99px; }
-    .accent-bar span:nth-child(1) { background: #94c9a4; }
-    .accent-bar span:nth-child(2) { background: #f1d88c; }
-    .accent-bar span:nth-child(3) { background: #edaec5; }
-
-    .mission-heading {
-      display: inline-block;
-      margin: 0 0 13px 4px;
+    .mission-statement {
+      margin: 8px 0 22px;
       color: #305b43;
-      font-size: clamp(21px, 5vw, 27px);
-      font-weight: 800;
-      letter-spacing: .02em;
-    }
-
-    .mission {
-      border-radius: 19px;
-      padding: clamp(17px, 4vw, 24px);
-      margin: 0 0 14px;
-      border: 1px solid transparent;
-      box-shadow: 0 5px 18px rgba(75, 87, 55, .055);
-    }
-
-    .mission.first { background: #fff0f3; border-color: #f2dce3; }
-    .mission.second { background: #fff6d9; border-color: #f2e8bc; }
-
-    .mission-main {
-      display: flex;
-      gap: 9px;
-      align-items: flex-start;
-      font-size: clamp(16px, 4.2vw, 20px);
-      line-height: 1.7;
+      font-size: clamp(19px, 4.9vw, 26px);
       font-weight: 750;
-    }
-
-    .mission-number {
-      flex: 0 0 auto;
-      color: #436f50;
-    }
-
-    .hint {
-      margin: 11px 0 0;
-      padding: 10px 12px;
-      background: rgba(255,255,255,.64);
-      border-radius: 12px;
-      color: #55634b;
-      font-size: clamp(13px, 3.6vw, 16px);
       line-height: 1.7;
-      font-weight: 600;
+    }
+
+    .mission-label {
+      font-weight: 850;
+    }
+
+    .mission-hint {
+      margin: 0 0 13px;
+      color: #516a48;
+      font-size: clamp(15px, 4vw, 19px);
+      font-weight: 650;
+      line-height: 1.7;
+    }
+
+    .mission-hint:last-of-type {
+      color: #805e69;
     }
 
     .camera-launch {
@@ -368,32 +315,14 @@
       #shutter { width: 62px; height: 62px; }
     }
 
-    @media (max-width: 400px) {
-      .masthead { padding: 17px 12px; }
-      .mission { padding: 15px; }
-      .mission-main { gap: 6px; }
-    }
   </style>
 </head>
 <body>
   <main id="home">
     <div class="page">
-      <header class="masthead">
-        <h1>デジタルスタンプ大作戦!芝ヶ原古墳古墳群（久世神社・久世廃寺跡）</h1>
-        <div class="accent-bar" aria-hidden="true"><span></span><span></span><span></span></div>
-      </header>
-
-      <h2 class="mission-heading">ミッション：</h2>
-
-      <section class="mission first">
-        <div class="mission-main"><span class="mission-number">①</span><span>誕生釈迦仏立像（たんじょうしゃかぶつりゅうぞう）が見つかった場所を探そう。</span></div>
-        <p class="hint">ヒント💡見つかった場所は久世神社本殿前にある説明板に書かれている！</p>
-      </section>
-
-      <section class="mission second">
-        <div class="mission-main"><span class="mission-number">②</span><span>見つかった場所にシャカちゃん連れていき、西向きで記念写真に撮ろう！</span></div>
-        <p class="hint">ヒント💡出土位置から西を向くと「踏切」が見える！</p>
-      </section>
+      <p class="mission-statement"><span class="mission-label">ミッション：</span>「誕生釈迦立像」（たんじょうしゃかぶつりゅうぞう）が見つかった場所に行き、西を向いてシャカちゃんと写真を撮ろう！</p>
+      <p class="mission-hint">ヒント①久世神社本殿前にある説明板をよく読んでみよう！</p>
+      <p class="mission-hint">ヒント②出土位置から西を向くと「踏切」が見える！</p>
 
       <button id="startCamera" class="camera-launch" type="button" aria-label="カメラを起動">
         <img src="image_camera.png" alt="タップしてカメラを起動" draggable="false">
